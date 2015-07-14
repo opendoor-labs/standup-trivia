@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="width=device-width,initial-scale=1,user-scalable=no" name="viewport" />
+    <link href='http://fonts.googleapis.com/css?family=Lato|Indie+Flower' rel='stylesheet' type='text/css'>
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font: 32pt/64pt 'Lato', sans-serif;
+        padding: 0 20px;
+        display: flex;
+        display: -webkit-flex;
+        -webkit-align-items: center;
+        -webkit-justify-content: center;
+      }
+
+      p {
+        text-align: center;
+      }
+
+      b {
+        font: 48pt/64pt 'Indie Flower', cursive;
+        color: indianred;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.0/lodash.min.js"></script>
+    <script>
+      (function() {
+        var topics = [
+          'Batman',
+          'video games',
+          'zombies',
+
+          'weddings',
+          'diamonds',
+          'carbon',
+
+          'asparagus',
+          'corn',
+          'chinese food',
+          'peaches',
+          'watermelon',
+          'coffee',
+          'tea',
+          'celebrity chefs',
+
+          'Canada',
+          'Australia',
+
+          'dogs',
+          'cats',
+          'evolution',
+          'insects',
+          'arachnids',
+          'body parts (SFW)',
+          'otters',
+          'narwhals',
+          'sloths',
+          'tasmanian devils',
+          'brains',
+          'philosophy',
+          'the Sun',
+          'our solar system',
+          'space',
+
+          'home appliances',
+          'light',
+          'legos',
+          'The Internet',
+
+          'action movies',
+          'Pixar movies',
+          'Garfield',
+          'MTV',
+          'minions',
+          'Star Wars',
+          'Star Trek',
+          'Tom Hanks',
+          'Tom Cruise',
+          'Tom Petty',
+          'Tom Jones',
+          'Julia Roberts',
+          'Julia Child',
+
+          'Barack Obama',
+          'Mitt Romney',
+          'Hilary Clinton',
+          'Jeb Bush',
+          'Bernie Sanders',
+        ];
+
+        var people = [
+          'Eric',
+          'JD',
+          'Ian',
+          'Julia',
+          'Kevin',
+          'Joy',
+          'Nelson',
+          'Blake',
+          'Megan',
+          'Spike',
+          'Brett',
+          'Brian',
+          'Nolan',
+          'Evan',
+          'Gabby',
+          'LaGrotta',
+          'Ryan',
+          'Jessica',
+          'Visnu',
+          'Neighman',
+          'Erica',
+        ];
+
+        var person = _.sample(people),
+            topic = _.sample(topics);
+
+        document.body.innerHTML =
+          '<p>Random fact about <b>' + topic +
+          '</b> from <b>' + person + '</b></p>';
+      })();
+    </script>
+  </body>
+</html>
