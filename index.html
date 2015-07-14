@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>Stand-up Trivia</title>
     <meta content="width=device-width,initial-scale=1,user-scalable=no" name="viewport" />
     <link href='http://fonts.googleapis.com/css?family=Lato|Indie+Flower' rel='stylesheet' type='text/css'>
     <style>
@@ -11,7 +12,7 @@
       }
 
       body {
-        font: 32pt/64pt 'Lato', sans-serif;
+        font: 32pt/48pt 'Lato', sans-serif;
         padding: 0 20px;
         display: flex;
         display: -webkit-flex;
@@ -21,11 +22,17 @@
 
       p {
         text-align: center;
+        -webkit-animation: fadeIn 1s;
       }
 
       b {
-        font: 48pt/64pt 'Indie Flower', cursive;
+        font: 42pt/48pt 'Indie Flower', cursive;
         color: indianred;
+        margin: 0 .5ex;
+      }
+
+      @-webkit-keyframes fadeIn {
+        from { opacity: 0 }
       }
     </style>
   </head>
