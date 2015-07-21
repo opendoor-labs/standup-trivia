@@ -44,8 +44,7 @@
             a = 11, // a - 1 should be divisible by m's prime factors
             c = 17; // c and m should be co-prime
         z = Math.floor(z / 1000 / 60 / 60 / 24);
-        Math.random = function() {
-          // define the recurrence relationship
+        Math.random = function LCG() {
           z = (a * z + c) % m;
           return z / m;
         };
