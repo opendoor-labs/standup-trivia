@@ -37,6 +37,20 @@
     </style>
   </head>
   <body>
+    <script>
+      // https://gist.github.com/Protonk/5389384
+      (function(z) {
+        var m = 25,
+            a = 11, // a - 1 should be divisible by m's prime factors
+            c = 17; // c and m should be co-prime
+        z = Math.floor(z / 1000 / 60 / 60 / 24);
+        Math.random = function() {
+          // define the recurrence relationship
+          z = (a * z + c) % m;
+          return z / m;
+        };
+      })(location.hash ? Date.parse(location.hash.substring(1)) : Date.now());
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.0/lodash.min.js"></script>
     <script>
       (function() {
@@ -167,12 +181,9 @@
           'Visnu',
         ];
 
-        var person = _.sample(people),
-            topic = _.sample(topics);
-
         document.body.innerHTML =
-          '<p>Random fact about <b>' + topic +
-          '</b> from <b>' + person + '</b></p>';
+          '<p>Random fact about <b>' + _.sample(topics) +
+          '</b> from <b>' + _.sample(people) + '</b></p>';
       })();
     </script>
   </body>
